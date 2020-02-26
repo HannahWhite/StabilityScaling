@@ -21,8 +21,8 @@ corine.crs = crs(corine)
 
 
 
-inputDir = 'D:/MODIS6/Modis_ver6_18.2.19' ## data downloaded 18.2.19
-outputDir = 'D:/MODIS6/MODIS_process_18.2.19'
+inputDir = 'K:/MODIS' ## data up to 25.1.2020
+outputDir = 'K:/MODISProcess'
 
 yearStr = 'A20[0-9][0-9]'  # Some text (or reg experession) that specifies the year of the data (e.g. 'A201[0-5]' specifies years 2010-2015)
 #corineInclude = c(18)  # Specify corine codes to include (pasture = 18, natural grasslands=26, moors and heathland=27)
@@ -77,6 +77,7 @@ for (f in 1:length(hdf.files)) {
   # Read in the MODIS data and crop to Ireland 
   sds <- get_subdatasets(paste(inputDir,hdf.files[f],sep='/'))
   
+
   # code to read in hdf files in windows 
   
   filename <- rasterTmpFile()
